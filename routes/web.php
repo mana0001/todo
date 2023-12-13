@@ -14,8 +14,7 @@ use App\Http\Controllers\TaskController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/tasks', [TaskController::class,'index']);
-Route::post('/tasks', [TaskController::class,'store']);
+Route::resource('tasks', TaskController::class);
 
 Route::get('/', function () {
     return view('welcome');
